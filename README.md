@@ -7,6 +7,18 @@ The manuscript is currently under peer review by the journal Neurocomputing (as 
 
 3.Train the model. You can use the following bash script to train the model. The learned model will be saved in the 'experiments/data_name/Model_version/checkpoints' folder. At the same time, you can utilize the pre-trained model weights and evaluate the prediction performance of the model by following the bash script provided below. The generated future frames will be saved in the --pred_dir folder. 
 
-4.You can get pretrained models from https://pan.baidu.com/s/1qc3v2yA5djtz2VthMGHW4w?pwd=cqtb .After downloading, please extract the compressed file to the "PredRNNv3" folder.
+4.You can get pretrained models from https://pan.baidu.com/s/1qc3v2yA5djtz2VthMGHW4w?pwd=cqtb After downloading, please extract the compressed file to the "PredRNNv3" folder.
+
+cd mnist_script/
+sh predrnn_mnist_train.sh
+sh predrnn_v2_mnist_train.sh
+
+cd kth_script/
+sh predrnn_kth_train.sh
+sh predrnn_v2_kth_train.sh
+
+cd bair_script/
+sh predrnn_bair_train.sh
+sh predrnn_v2_bair_train.sh
 
 

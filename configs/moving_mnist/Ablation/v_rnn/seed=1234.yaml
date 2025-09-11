@@ -1,0 +1,85 @@
+Architecture: "R_ViT"
+
+Seed: 1234
+
+Setting: moving_mnist
+
+Logger:
+    save_dir: "experiments/"
+
+ckpt_path: None
+
+Checkpointer:
+    save_top_k: 1
+    save_last: True
+    every_n_epochs: 1
+
+Trainer:
+#    strategy: 'ddp'
+    accelerator: 'gpu'
+    log_every_n_steps: 64
+    devices: [0]  # 改动
+    max_epochs: 200
+    gradient_clip_val: 1
+
+Data:
+    val_batch_size: 16
+    test_batch_size: 16
+    train_batch_size: 16
+    num_workers: 4
+
+Task:
+    loss:
+        name: "MSE"
+
+    context_length: 10
+    target_length: 10
+    n_stochastic_preds: 1
+    metric: "MSE"
+    optimization:
+        optimizer:
+            - name: AdamW
+              args:
+                  betas: [ 0.9, 0.999 ]
+              lr_per_sample: 0.00000625
+        lr_shedule:
+            - name: MultiStepLR
+              args:
+                  milestones: [1000, 1500] #[2, 20, 50, 90]
+                  gamma: 0.1
+    n_log_batches: 2
+
+    shedulers:
+        -
+          call_name: sampling
+          name: "reverse_exp"
+          args:
+              r_sampling_step_1: 25000
+              r_sampling_step_2: 50000
+              r_exp_alpha: 2500
+
+
+Model:
+    patch_size: 4
+    n_image: 1
+    n_hidden: 128
+    context_length: 10
+    target_length: 10
+    val_target_length: 10
+    input_size_h: 64
+    input_size_w: 64
+    n_out: 1
+    n_heads: 4
+    num_layers: 4
+    mlp_ratio: 4
+    gate_act: "silu"
+    drop: 0.0
+    attn_drop: 0.0
+    drop_path: 0.0
+
+
+
+
+
+
+

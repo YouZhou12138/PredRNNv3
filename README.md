@@ -3,4 +3,7 @@ The manuscript is currently under peer review by the journal Neurocomputing (as 
 ## Get Started
 1.Install the PyTorch-related tools as instructed in the requirement.txt file.
 
-2.Download the required training dataset and store the downloaded dataset at the designated location.
+2.According to the instructions in the "datasets/prepare-data" folder, download the training data sets required, and store the downloaded data sets in the designated location.
+
+
+

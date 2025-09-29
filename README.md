@@ -5,6 +5,7 @@ In this work, we replace the spatiotemporal LSTM employed in **[PredRNNv2](https
 
 The main framework of DB-LSTM.
 ![](https://github.com/YouZhou12138/PredRNNv3/blob/main/imgs/DB_LSTM.png)
+<img src="https://github.com/YouZhou12138/PredRNNv3/blob/main/imgs/Moving_mnist.png" alt="Moving MNIST Results" width="50%"/>
 Quantitative results of different methods on the Moving MNIST dataset (10→10 frames).
 ![](https://github.com/YouZhou12138/PredRNNv3/blob/main/imgs/Moving_mnist.png)
 ## Overview

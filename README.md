@@ -4,7 +4,7 @@ This repository is an open-source project implementing video prediction benchmar
 In this work, we replace the spatiotemporal LSTM employed in **[PredRNNv2](https://github.com/thuml/predrnn-pytorch?tab=readme-ov-file)** with a Dual-Branch LSTM (DB-LSTM). Specifically, the CNN branch is responsible for local feature extraction, while the ViT branch handles global feature extraction. The Dual-Branch Modulation Module (DBMM) is designed to efficiently fuse the local and global features.
 
 The main framework of DB-LSTM.
-![输入图片说明](/imgs/2025-09-29/eXmoi5H5vroeUmPX.png)
+![](https://github.com/YouZhou12138/PredRNNv3/blob/main/imgs/DB_LSTM.png)
 Quantitative results of different methods on the Moving MNIST dataset (10→10 frames).
 ![输入图片说明](/imgs/2025-09-29/5zLOWq4pg4atxUab.png)
 ## Overview

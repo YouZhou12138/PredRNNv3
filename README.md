@@ -14,6 +14,6 @@ sh mm_PredRNNv3_train.sh
 
 sh mm_PredRNNv3_test.sh.sh
 
-4.You can get pretrained models from https://pan.baidu.com/s/1qc3v2yA5djtz2VthMGHW4w?pwd=cqtb After downloading, please extract the compressed file to the "PredRNNv3" folder.
+4.You can get pretrained models from **[BaiDu]https://pan.baidu.com/s/1qc3v2yA5djtz2VthMGHW4w?pwd=cqtb** After downloading, please extract the compressed file to the "PredRNNv3" folder.
 
 

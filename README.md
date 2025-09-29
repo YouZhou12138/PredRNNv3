@@ -1,5 +1,6 @@
 # PredRNNv3: A CNN-Transformer Collaborative Recurrent Neural Network for Spatiotemporal Prediction
 This repository is an open-source project implementing video prediction benchmarks using the **PredRNNv3** model, which includes the implementation code corresponding to the manuscript. Currently, this project is intended solely for reviewers' reference.
+
 ##  Introduction
 In this work, we replace the spatiotemporal LSTM employed in **[PredRNNv2](https://github.com/thuml/predrnn-pytorch?tab=readme-ov-file)** with a Dual-Branch LSTM (DB-LSTM). Specifically, the CNN branch is responsible for local feature extraction, while the ViT branch handles global feature extraction. The Dual-Branch Modulation Module (DBMM) is designed to efficiently fuse the local and global features.
 
@@ -10,6 +11,7 @@ The main framework of DB-LSTM.
 Quantitative results of different methods on the Moving MNIST dataset (10→10 frames).
 
 <img src="https://github.com/YouZhou12138/PredRNNv3/blob/main/imgs/Moving_mnist.png" style="display: block; margin: 0 auto; width: 50%;" />
+
 ## Overview
 - ```PredRNNv3/configs```: Including the hyperparameter settings tested on all benchmark datasets.
 - ```PredRNNv3/datasets```: Including datasets acquisition and preprocessing methods used in the manuscript.
